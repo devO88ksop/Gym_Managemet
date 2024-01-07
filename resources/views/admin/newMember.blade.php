@@ -4,7 +4,7 @@
 <main>
     <!--? Hero Start -->
     <div class="slider-area2">
-        <div class="slider-height2 d-flex align-items-center">
+        <div class="slider-height2 d-flex align-items-center h-50">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -21,7 +21,7 @@
     <div class="contact-form-main mt-100 mb-100">
         <div class="container">
             <div class="row justify-content-end">
-                <div class="col-xl-7 col-lg-7">
+                <div class="col-xl-7 col-lg-7 col-mb-6">
                     <div class="form-wrapper">
                         <!--Section Tittle  -->
                         <div class="form-tittle">
@@ -79,7 +79,7 @@
         </div>
         <!-- contact left Img-->
         <div class="from-left d-none d-lg-block">
-            <img src="assets/img/gallery/contact_form.png" alt="">
+            <img src="assets/img/gallery/contact_form.png" style="height: 580px; width:580px" alt="">
         </div>
     </div>
     <!-- Contact form End -->

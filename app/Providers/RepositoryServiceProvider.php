@@ -7,6 +7,7 @@ use App\Repositories\PromotionRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Http\Controllers\PromoController;
 
+
 class RepositoryServiceProvider extends ServiceProvider
 {
     /**

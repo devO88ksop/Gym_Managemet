@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.index');
 });
 Route::get('/index',function(){
     return view('admin.index');
@@ -23,5 +23,8 @@ Route::get('/index',function(){
 Route::get('/newmember',function(){
     return view('admin.newMember');
 });
+Route::get('/promolist',function(){
+    return view('admin.promolist');
+});
 Route::resource('promo', PromoController::class);
-// Route::get('/promo', [PromoController::class, 'index']);
+

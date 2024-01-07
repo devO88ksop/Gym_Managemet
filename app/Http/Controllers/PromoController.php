@@ -14,8 +14,9 @@ class PromoController extends Controller
     }
     public function index()
     {
-        $promo=$this->b->all();
-        return view('admin.promotions.createPromo',compact('promo'));
+        $promos =$this->b->all();
+        // dd($promos->toArray());
+        return view('admin.promolist',compact('promos'));
     }
 
     /**
@@ -31,7 +32,9 @@ class PromoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->b->store($request );
+        return redirect('/promolist');
+
     }
 
     /**
