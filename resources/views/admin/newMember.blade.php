@@ -20,12 +20,12 @@
     <!--? Contact form Start -->
     <div class="contact-form-main mt-100 mb-100">
         <div class="container">
-            <div class="row justify-content-end">
+            <div class="row justify-content-end mb-4">
                 <div class="col-xl-7 col-lg-7 col-mb-6">
                     <div class="form-wrapper">
                         <!--Section Tittle  -->
                         <div class="form-tittle">
-                            <div class="row ">
+                            <div class="row">
                                 <div class="col-lg-11 col-md-10 col-sm-10">
                                     <div class="section-tittle">
                                         <span>Contact Form</span>
@@ -43,8 +43,8 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-                                    <div class="form-box email-icon mb-30">
-                                        <input type="text" name="email" placeholder="Phone">
+                                    <div class="form-box  mb-30">
+                                        <input type="text" name="description" placeholder="Description">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 mb-30">
@@ -68,19 +68,20 @@
                                         <textarea name="message" id="message" placeholder="Message"></textarea>
                                     </div>
                                     <div class="submit-info">
-                                        <button class="btn" type="submit">Send Message</button>
+                                        <button class="btn" type="submit">Add NEW MEMBER</button>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
+                <div class="from-left d-none d-lg-block col-xl-5 col-lg-5 col-md-10">
+                    <img src="assets/img/gallery/contact_form.png" style="height: 580px; width:580px" alt="">
+                </div>
             </div>
         </div>
         <!-- contact left Img-->
-        <div class="from-left d-none d-lg-block">
-            <img src="assets/img/gallery/contact_form.png" style="height: 580px; width:580px" alt="">
-        </div>
+
     </div>
     <!-- Contact form End -->
 </main>

@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2 text-center pt-70">
-                                <h2> Add New Promotion Plans </h2>
+                                <h2> Add New Payments </h2>
                             </div>
                         </div>
                     </div>
@@ -22,8 +22,8 @@
                             <div class="row ">
                                 <div class="col-lg-11 col-md-10 col-sm-10">
                                     <div class="section-tittle">
-                                        <span>Promotion Plan Form</span>
-                                        <h2>Adding Plan</h2>
+                                        <span>Payment Form</span>
+                                        <h2>Adding Payment Plan</h2>
                                     </div>
                                 </div>
                             </div>
@@ -37,17 +37,18 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-box user-icon mb-30">
-                                        <input type="text" name="name" placeholder="Name" id="title"
-                                            class="@error('name') is-invalid @enderror">
+                                        <input type="text" name="amount" placeholder="Fill amount..." id="title"
+                                            class="@error('amount') is-invalid @enderror">
                                     </div>
-                                    @error('name')
+                                    @error('amount')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-box email-icon mb-30">
 
-                                        <input type="text" name="description" placeholder="description... " class="@error('name') is-invalid @enderror">
+                                        <input type="text" name="description" placeholder="description... "
+                                            class="@error('name') is-invalid @enderror">
                                     </div>
                                     @error('description')
                                         <div class="alert alert-danger">{{ $message }}</div>

@@ -116,7 +116,7 @@
                         <div class="single-team mb-30">
                             <div class="team-img">
                                 <img src="assets/img/gallery/team2.png" alt="">
-                                <div class="team-caption">
+                                    <div class="team-caption">
                                     <span>Creative derector</span>
                                     <h3><a href="#">Jhon Sunsaev</a></h3>
                                     <!-- Blog Social -->

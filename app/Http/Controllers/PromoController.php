@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Interfaces\PromotionInterface;
+
+use App\Models\Promotions;
 use Illuminate\Http\Request;
+use App\Interfaces\PromotionInterface;
 
 class PromoController extends Controller
 {
@@ -15,8 +17,8 @@ class PromoController extends Controller
     public function index()
     {
         $promos =$this->b->all();
-        // dd($promos->toArray());
-        return view('admin.promolist',compact('promos'));
+        // dd($promos);
+        return view('admin.promolist', compact('promos'));
     }
 
     /**
@@ -24,7 +26,8 @@ class PromoController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('admin.createPromo');
     }
 
     /**
@@ -32,8 +35,9 @@ class PromoController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $this->b->store($request );
-        return redirect('/promolist');
+        return redirect('/promo');
 
     }
 
@@ -50,7 +54,10 @@ class PromoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $promos=$this->b->findById($id);
+
+        // dd($promos->toArray());
+        return view('admin.editPromo', compact('promos'));
     }
 
     /**
@@ -58,7 +65,9 @@ class PromoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // dd($request->all(), $id);
+        $this->b->update($id);
+        return redirect('/promo');
     }
 
     /**
@@ -66,6 +75,7 @@ class PromoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $this->b->destroy($id);
+        return back();
     }
 }

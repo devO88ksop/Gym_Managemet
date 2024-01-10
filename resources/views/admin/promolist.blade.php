@@ -7,45 +7,55 @@
             <!--? Want To work -->
             <section class="wantToWork-area w-padding">
                 <div class="container">
-                    <div class="row align-items-end justify-content-between">
-                        <div class="col-lg-6 col-md-10 col-sm-10">
+                    <div class=" align-items-end justify-content-between">
+                        <div class="">
                             <div class="section-tittle section-tittle2">
                                 <span>oUR sERVICES FOR YOU</span>
                                 <h2>" Unlock Your Success: Exclusive Promotion List Revealed! "</h2>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-2 col-md-3">
-                            {{-- <a href="#" class="btn wantToWork-btn f-right">More Services</a> --}}
+
+                        <div class="d-flex justify-content-center">
+                            @foreach ($promos as $promo)
+                                <div class="card mx-2 p-5" style="width: 40rem;height: 50rem;">
+
+                                    <h1 class="card-title "> Name : {{ $promo->name }} </h1>
+
+                                    <h3 class="card-text font-weight-bold"> Description : {{ $promo->description }}</h3>
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                    <div class="col-lg-12 d-flex">
+
+                                        <div class="submit-info">
+                                            <i class="fa-solid fa-user-pen"></i>
+                                            <a href="{{ url('promo/' . $promo->promotion_id . '/edit') }}"
+                                                class="btn header-btn">Edit</a>
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="header-right-bCLIENT FEtn f-right d-none d-lg-block ml-100">
+                                                <form action="{{ url('promo/'. $promo->promotion_id) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn header-btn">Delete</a>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="d-flex justify-content-center">>
+
+                            {{ $promos->links() }}
                         </div>
                     </div>
-                </div>
             </section>
-            <!-- Want To work End -->
-            <!--? Services Content -->
-            {{-- @foreach ($promos as $promo) --}}
-                <div class="d-flex ">
-                    <div class="w-25">
-                        <div class="single-cat text-center mb-50">
-                            <div class="cat-icon">
-                                <i class="flaticon-fitness"></i>
-                            </div>
-                            <div class="cat-cap">
-                                <h5>  </h5>
-                                <p>The sea freight service has grown consider ably in recent years. We spend timetting to kn.</p>
-                            </div>
-                            <div class="img-cap">
-                                <a href="services.html" class="">Discover More About Us <i
-                                        class="ti-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                {{-- <div class="container d-inline">
-
-                </div> --}}
-            {{-- @endforeach --}}
+            </div>
+            </div>
         </section>
-        <!-- Services Area End -->
+
     </main>
 @endsection

@@ -23,8 +23,7 @@ Route::get('/index',function(){
 Route::get('/newmember',function(){
     return view('admin.newMember');
 });
-Route::get('/promolist',function(){
-    return view('admin.promolist');
-});
+
+
 Route::resource('promo', PromoController::class);
 
